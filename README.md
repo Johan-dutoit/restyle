@@ -190,12 +190,16 @@ const theme = createTheme({
 
 #### Breakpoints
 
-Breakpoints are defined as minimum widths (inclusive) for different target screen sizes where we want to apply differing styles. Consider giving your breakpoints names that give a general idea of the type of device the user is using:
+Breakpoints are defined as minimum widths (inclusive) for different target screen sizes where we want to apply differing styles. Consider giving your breakpoints names that give a general idea of the type of device the user is using. Breakpoints can be defined by either a single value (width) or an object containing both width and height:
 
 ```ts
 const theme = createTheme({
   breakpoints: {
     phone: 0,
+    longPhone: {
+      width: 0,
+      height: 812
+    },
     tablet: 768,
     largeTablet: 1024,
   },
@@ -470,7 +474,7 @@ Any prop powered by Restyle can optionally accept a value for each screen size, 
 const theme = createTheme({
   // ...
   breakpoints: {
-    phone: 0,
+    phone: 0, 
     tablet: 768,
   }
 })
@@ -559,7 +563,7 @@ Of course, no app is complete without a dark mode. Here a simple example of how 
 ```tsx
 import React, {useState} from 'react';
 import {Switch} from 'react-native';
-import {ThemeProvider, createBox, createText} from '@shopify/restyle';
+import {ThemeProvider, createBox, createText, createTheme} from '@shopify/restyle';
 
 export const palette = {
   purple: '#5A31F4',

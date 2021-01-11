@@ -7,6 +7,9 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
+## 1.4.0 - 2020-12-15
+* Add 2-dimensional breakpoints [#70](https://github.com/Shopify/restyle/pull/70) by [@Johan-duitot](https://github.com/Johan-dutoit)
+
 ## 1.3.1 - 2020-10-26
 * Silently ignore any errors caused by missing a variant definition in the theme (e.g. textVariants), to preserve backwards compatibility. [#64](https://github.com/Shopify/restyle/pull/64) by [@jonogreenz](https://github.com/jonogreenz)
 * Disallow creating a variant with the existing base theme keys of `colors, spacing, breakpoints, zIndices, borderRadii`. [#64](https://github.com/Shopify/restyle/pull/64) by [@jonogreenz](https://github.com/jonogreenz)
